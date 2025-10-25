@@ -23,6 +23,7 @@ class Todo extends Model
     ];
 
     protected $casts = [
+        'due_date' => 'date',
         'status' => TodoStatus::class,
         'priority' => TodoPriority::class,
     ];

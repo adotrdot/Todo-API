@@ -10,3 +10,4 @@ Route::get('/user', function (Request $request) {
 
 Route::post('/createTodo', [TodoController::class, 'store']);
 Route::get('/chart', [TodoController::class, 'summary']);
+Route::get('/excel', [TodoController::class, 'excel']);

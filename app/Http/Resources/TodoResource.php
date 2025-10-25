@@ -18,7 +18,7 @@ class TodoResource extends JsonResource
             'id' => $this->id,
             'title' => $this->title,
             'assignee' => $this->assignee,
-            'due_date' => $this->due_date,
+            'due_date' => $this->due_date->format('Y-m-d'),
             'time_tracked' => (int) $this->time_tracked,
             'status' => $this->status,
             'priority' => $this->priority,
