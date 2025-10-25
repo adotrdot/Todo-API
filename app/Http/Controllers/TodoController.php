@@ -34,7 +34,7 @@ class TodoController extends Controller
     {
         $validated = $request->validated();
 
-        $newTodo = Todo::create($validated)->refresh();
+        $newTodo = Todo::create($validated);
 
         return (new TodoResource($newTodo))
             ->response()

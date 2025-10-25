@@ -17,6 +17,11 @@ class Todo extends Model
         'priority',
     ];
 
+    protected $attributes = [
+        'time_tracked' => 0,
+        'status' => TodoStatus::PENDING,
+    ];
+
     protected $casts = [
         'status' => TodoStatus::class,
         'priority' => TodoPriority::class,
