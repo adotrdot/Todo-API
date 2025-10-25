@@ -133,4 +133,4 @@ Akses API di:
 
 ## 👨‍💻 Author
 
-**Alvin Aryanta Suwardono** ([LinkedIn](https://www.linkedin.com/in/alvinaryanta) · [GitHub](https://github.com/alvinaryanta))
+**Alvin Aryanta Suwardono** ([LinkedIn](https://www.linkedin.com/in/alvin-aryanta-suwardono-a0a25918b/) · [GitHub](https://github.com/adotrdot/))
