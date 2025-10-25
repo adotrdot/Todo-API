@@ -18,11 +18,11 @@ Dibangun menggunakan **Laravel**.
 
 ## ✅ Requirements
 
-| No | Requirement | Status |
-|----|--------------|:------:|
-| 1 | **API Create Todo** – Menambahkan data Todo baru ke database | ✅ |
-| 2 | **API Get Todo (Excel Report)** – Menghasilkan file Excel dengan data Todo dan ringkasan otomatis | ✅ |
-| 3 | **API Get Todo (Chart Data)** – Menyediakan data terformat untuk kebutuhan visualisasi chart | ✅ |
+| No | Requirement                                                                                     | Status |
+|----|-------------------------------------------------------------------------------------------------|:------:|
+| 1 | **API Create Todo** – Menambahkan data Todo baru ke database                                    | ✅ |
+| 2 | **API Get Todo (Excel Report)** – Menghasilkan file Excel dengan data Todo dan sistem filtering | ✅ |
+| 3 | **API Get Todo (Chart Data)** – Menyediakan data terformat untuk kebutuhan visualisasi chart    | ✅ |
 
 ## 📦 Pengujian Endpoints
 
