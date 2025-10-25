@@ -88,7 +88,8 @@ class TodoController extends Controller
         $resourceCollection = TodoResource::collection($todos);
 
         // Export excel
-        return (new TodoExport($resourceCollection))->download('todos.xlsx');
+        $timestamp = now()->format('Ymd_His');
+        return (new TodoExport($resourceCollection))->download("todos_{$timestamp}.xlsx");
     }
 
     /**
