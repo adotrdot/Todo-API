@@ -9,13 +9,13 @@ use App\Http\Resources\TodoResource;
 use App\Models\Todo;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use Maatwebsite\Excel\Facades\Excel;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
 class TodoController extends Controller
 {
     /**
-     * Store a newly created resource in storage.
+     * Requirement 1.
+     * Method untuk create Todo baru.
      */
     public function store(StoreTodoRequest $request) : JsonResponse
     {
@@ -31,23 +31,10 @@ class TodoController extends Controller
             ->setStatusCode(201);
     }
 
-    public function summary(Request $request) : JsonResponse
-    {
-        // Validasi
-        $type = $request->query('type');
-        if (!$type) {
-            return response()->json([
-                'error' => 'Missing parameters: type',
-            ], 400);
-        }
-
-        // Response
-        // (type handling ada di dalam ToDoChartResource)
-        return (new TodoChartResource($request))
-            ->response()
-            ->setStatusCode(200);
-    }
-
+    /**
+    * Requirement 2.
+    * Method untuk generate file Excel
+    */
     public function excel(Request $request) : BinaryFileResponse
     {
         // Begin query
@@ -102,5 +89,26 @@ class TodoController extends Controller
 
         // Export excel
         return (new TodoExport($resourceCollection))->download('todos.xlsx');
+    }
+
+    /**
+     * Requirement 3.
+     * Method untuk membuat summary untuk data chart
+     */
+    public function summary(Request $request) : JsonResponse
+    {
+        // Validasi
+        $type = $request->query('type');
+        if (!$type) {
+            return response()->json([
+                'error' => 'Missing parameters: type',
+            ], 400);
+        }
+
+        // Response
+        // (type handling ada di dalam ToDoChartResource)
+        return (new TodoChartResource($request))
+            ->response()
+            ->setStatusCode(200);
     }
 }
