@@ -28,6 +28,7 @@ class StoreTodoRequest extends FormRequest
      */
     public function rules(): array
     {
+        // Validasi
         return [
             'title' => 'required|string',
             'assignee' => 'nullable|string',
@@ -35,8 +36,11 @@ class StoreTodoRequest extends FormRequest
                 'required',
                 'date',
                 function ($attribute, $value, $fail) {
-                    if (Carbon::parse($value)->isPast()) {
-                        $fail('Due date tidak bisa di waktu yang sudah berlalu.');
+                    $dueDate = Carbon::parse($value)->startOfDay();
+                    $today = Carbon::today();
+
+                    if ($dueDate->lt($today)) {
+                        $fail('Due date tidak bisa di tanggal yang sudah berlalu.');
                     }
                 }
             ],
