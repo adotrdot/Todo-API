@@ -4,23 +4,17 @@ Proyek ini merupakan proyek API hasil pengerjaan **Technical Test Backend Develo
 
 Dibangun menggunakan **Laravel**.
 
----
-
 ## 🧾 Dokumentasi & Demo
 
-📘 **Postman Collection:** [url here]
+📘 **Postman Collection:** [Link Postman Collection](https://www.postman.com/descent-module-astronomer-14693525/workspace/workspace-technical-test-talenavi/collection/35181536-0e8769d0-12c3-43c2-ae3f-6e6302dca590?action=share&creator=35181536)
 
-🎥 **Video Presentasi:** [url here]
-
----
+🎥 **Video Presentasi:** [Link GDrive](https://drive.google.com/file/d/1_1HHzsvqnh-vhVF4to8XUsQSlffQQHuE/view?usp=sharing)
 
 ## 🚀 Tech Stack
 - **Framework:** Laravel 12
 - **Database:** MySQL
 - **Library:** Maatwebsite Excel (untuk export data ke Excel)  
 - **Testing Tool:** Postman
-
----
 
 ## ✅ Requirements
 
@@ -29,8 +23,6 @@ Dibangun menggunakan **Laravel**.
 | 1 | **API Create Todo** – Menambahkan data Todo baru ke database | ✅ |
 | 2 | **API Get Todo (Excel Report)** – Menghasilkan file Excel dengan data Todo dan ringkasan otomatis | ✅ |
 | 3 | **API Get Todo (Chart Data)** – Menyediakan data terformat untuk kebutuhan visualisasi chart | ✅ |
-
----
 
 ## 📦 Pengujian Endpoints
 
@@ -50,8 +42,6 @@ Dibangun menggunakan **Laravel**.
   "priority": "high"
 }
 ````
-
----
 
 ### 2️⃣ Get Todos (Excel Export)
 
@@ -85,8 +75,6 @@ Filtering yang di-support bisa dilihat pada tabel berikut:
 | `status`       | `status=pending,in_progress`      | Multi-value                        |
 | `priority`     | `priority=low,high`               | Multi-value                        |
 
----
-
 ### 3️⃣ Get Todos (Chart Data)
 
 **Method:** `GET /api/chart`
@@ -117,13 +105,11 @@ GET /api/chart?type=status
 }
 ```
 
----
-
 ## ⚙️ Cara Menjalankan Proyek
 
 ```bash
 # Clone repository
-git clone [url-here]
+git clone https://github.com/adotrdot/Todo-API.git
 cd talenavi-backend-test
 
 # Install dependencies
@@ -144,8 +130,6 @@ php artisan serve
 
 Akses API di:
 👉 `http://localhost:8000/api/`
-
----
 
 ## 👨‍💻 Author
 
