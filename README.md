@@ -110,7 +110,7 @@ GET /api/chart?type=status
 ```bash
 # Clone repository
 git clone https://github.com/adotrdot/Todo-API.git
-cd talenavi-backend-test
+cd Todo-API
 
 # Install dependencies
 composer install
